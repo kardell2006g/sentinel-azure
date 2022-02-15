@@ -1,4 +1,4 @@
-policy "enforce-mandatory-tags" {
+policy "enforce_mandatory_tags" {
   enforcement_level = "hard-mandatory"
 }
 
