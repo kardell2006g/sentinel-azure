@@ -4,6 +4,7 @@ policy "enforce_mandatory_tags" {
 
 policy "restrict-vm-size" {
   enforcement_level = "soft-mandatory"
+}
 
 module "tfplan-functions" {
   source = "./functions/tfplan-functions.sentinel"
