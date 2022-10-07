@@ -30,7 +30,7 @@ jobs:
        # run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-        name: Get version
+      - name: Get version
         id: vars
         run: echo ::set-output name=sentinel.hcl::$(cat VERSION)
       - name: Test output
