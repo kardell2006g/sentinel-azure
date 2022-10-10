@@ -33,6 +33,8 @@ jobs:
       - name: Get version
         id: vars
         run: echo ::set-output name=version::$(cat ./sentinel.hcl)
-      - name: Test output
-        run: echo ${{ steps.vars.outputs.version }}
-           # awk "/^$path/{print}"
+      - name: Set Variable
+        run: echo "sent=${{ steps.vars.outputs.version }}" >> $GITHUB_ENV
+            # echo awk "/^$path/{print}"
+      - name: Echo variable
+             echo ${{ env.sent }}
