@@ -35,6 +35,9 @@ jobs:
         run: echo ::set-output name=version::$(cat ./sentinel.hcl)
       - name: Set Variable
         run: echo "sent=${{ steps.vars.outputs.version }}" >> $GITHUB_ENV
-            # echo awk "/^$path/{print}"
+      # Echo Variable  
       - name: Echo variable
         run:  echo ${{ env.sent }}
+      # Look for instances of Path
+      - name: match
+        run: $sent | echo awk "/^$path/{print}"
