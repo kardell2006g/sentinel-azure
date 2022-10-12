@@ -37,7 +37,7 @@ jobs:
       # Look for instances of Path
       - name: match
         run:  while read line; do
-              if  echo "$line" | grep -q "source"; then path+= "${line##*:}" | "paths=${path}" >> $GITHUB_ENV  ; fi 
+              if  echo "$line" | grep -q "source"; then echo "${line##*:}" | echo "paths="${line##*:}"" >> $GITHUB_ENV  ; fi 
               done < ./sentinel.hcl
          # Echo Variable  
       - name: Echo variable
