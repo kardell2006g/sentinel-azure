@@ -41,5 +41,5 @@ jobs:
       # Look for instances of Path
       - name: match
         run:  while read line; do
-              if  echo "$line" | grep -q "source="; then echo "ok"; fi
+              if  echo "$line" | grep -q "source"; then echo "ok"; fi
               done < ./sentinel.hcl
