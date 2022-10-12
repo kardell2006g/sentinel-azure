@@ -40,4 +40,4 @@ jobs:
         run:  echo ${{ env.sent }}
       # Look for instances of Path
       - name: match
-        run:  if [[ $sent =~ source ]] ; then echo $sent; fi'
+        run:  echo env.sent
