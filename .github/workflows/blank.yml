@@ -41,8 +41,12 @@ jobs:
       # Look for instances of Path
       - name: match
         run:  while read line; do
-              if  echo "$line" | grep -q "source"; then echo test="${line##*=}" >> $GITHUB_ENV ; fi
+              echo 'test<<EOF' >> $GITHUB_ENV               
+              if  echo "$line" | grep -q "source"; then echo "${line##*=}" >> $GITHUB_ENV ; fi
+              echo 'EOF' >> $GITHUB_ENV
               done < ./sentinel.hcl
       # Echo Variable  
       - name: Echo variable
         run:  echo ${{ env.test }}
+      - name: use env var
+        run: echo "$test"
