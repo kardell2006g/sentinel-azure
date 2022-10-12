@@ -40,4 +40,6 @@ jobs:
         run:  echo ${{ env.sent }}
       # Look for instances of Path
       - name: match
-        run:  echo grep source ${{ env.sent }}
+        run:  while read line; do
+              if  echo "$line" | grep -q "source="; then echo "ok"; fi
+              done < ./sentinel.hcl
