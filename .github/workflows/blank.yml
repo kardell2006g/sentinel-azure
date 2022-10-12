@@ -40,4 +40,4 @@ jobs:
         run:  echo ${{ env.sent }}
       # Look for instances of Path
       - name: match
-        run:  echo $env.sent
+        run:  echo grep source ${{ env.sent }}
