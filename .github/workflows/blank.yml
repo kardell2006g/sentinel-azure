@@ -54,5 +54,5 @@ jobs:
             a=$(b)
             if [b]
             then echo "$a has found."
-            else echo "filename has not been found";
+            else echo "filename has not been found"
             fi
