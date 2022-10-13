@@ -53,9 +53,5 @@ jobs:
         run: #echo "Checking following paths exist:" ${{ env.test }}
              ls
              ref='b'
-             if [[ ${ref} = "b" ]]; then
-               v=$(echo "hi")
-             echo "version tag is ${v}"
-               else
-             echo "There is no github tag reference, skipping"
+             if [[ ${ref} = "b" ]]; then v=$(echo "hi") echo "version tag is ${v}" else echo "There is no github tag reference, skipping"
              fi
