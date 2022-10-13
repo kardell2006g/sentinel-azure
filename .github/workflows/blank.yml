@@ -52,4 +52,4 @@ jobs:
       - name: Check Path Exists
         run: #echo "Checking following paths exist:" ${{ env.test }}
              echo var="Hello World!"
-             if [ -z "${var+x}" ]; then echo "var is unset"; else echo "var is set to '$var'"; fi
+                  if [ -z ${var+x} ]; then echo "var is unset"; else echo "var is set to '$var'"; fi
