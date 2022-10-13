@@ -47,6 +47,7 @@ jobs:
               #echo 'EOF' >> $GITHUB_ENV
       # Echo Variable  
       - name: Echo variable
-        run:  echo ${{ env.test }}
-      - name: use env var
-        run: echo "$test"
+        run:  echo "Checking following paths exist:" ${{ env.test }}
+      # Check Path 
+      - name: Check Path Exists
+        run:  echo cat ${{ env.test }}
