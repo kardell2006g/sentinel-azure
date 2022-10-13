@@ -54,5 +54,5 @@ jobs:
             file="/.config/backup.cfg"
             if [ ! -f "$file" ]
             then
-            echo "$0:File '${file}' not found."
+            echo "File '${file}' not found."
             fi
