@@ -51,8 +51,11 @@ jobs:
       # Check Path 
       - name: Check Path Exists
         run: #echo "Checking following paths exist:" ${{ env.test }}
-            a = "b"
-            if echo [$a = "b"] ;
-            then echo "$a has been found."
-            else echo "filename has not been found"
-            fi
+             ls
+             ref='b'
+             if [[ ${ref} = "b" ]]; then
+               v=$(echo "hi")
+             echo "version tag is ${v}"
+               else
+             echo "There is no github tag reference, skipping"
+             fi
