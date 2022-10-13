@@ -52,7 +52,6 @@ jobs:
       - name: Check Path Exists
         run: #echo "Checking following paths exist:" ${{ env.test }}
             #file=$(/.config/backup.cfg)
-            #!/bin/bash
             filename=myfile.txt
             if [ -f "$filename" ];
             then
