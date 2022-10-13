@@ -53,6 +53,6 @@ jobs:
         run: #echo "Checking following paths exist:" ${{ env.test }}
             a=$(b)
             if [b]
-            then echo "$a has found.";
+            then echo "$a has found."
             else echo "filename has not been found";
             fi
