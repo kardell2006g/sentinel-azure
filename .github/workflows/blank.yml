@@ -51,11 +51,8 @@ jobs:
       # Check Path 
       - name: Check Path Exists
         run: echo "Checking following paths exist:" ${{ env.test }}
-             FILE="${{ env.test }}" 
-             [ "$FILE" == "" ] && { echo "Usage:$0 filename"; exit 1; }
-             if [ -e "$FILE" ];
-             then
-             echo "File $FILE exist."
-             else
-             echo "File $FILE does not exist" >&2
-             fi
+            file="/.config/backup.cfg"
+            if [ ! -f "$file" ]
+            then
+            echo "$0:File '${file}' not found."
+            fi
