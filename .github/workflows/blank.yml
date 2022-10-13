@@ -53,9 +53,7 @@ jobs:
         run: #echo "Checking following paths exist:" ${{ env.test }}
             #file=$(/.config/backup.cfg)
             filename=myfile.txt
-            if [-f "$filename"]
-            then
-            echo "$filename has found."
-            else
-            echo "filename has not been found"
+            if [-f "$filename"];
+            then echo "$filename has found."
+            else echo "filename has not been found"
             fi
