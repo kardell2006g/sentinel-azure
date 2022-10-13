@@ -50,5 +50,6 @@ jobs:
         run:  echo ${{ env.test }}
       # Check Path 
       - name: Check Path Exists
-        run: echo "Checking following paths exist:" cat ${{ env.test }}
+        run: echo "Checking following paths exist:" ${{ env.test }}
+             cat ${{ env.test }}
              
