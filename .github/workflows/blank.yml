@@ -51,5 +51,9 @@ jobs:
       # Check Path 
       - name: Check Path Exists
         run: echo "Checking following paths exist:" ${{ env.test }}
-             [[ -f ./cow ]] && echo "File exists" || echo "File does not exist"
-             
+             if [ -f ${{ env.test }} ];
+             then
+             echo "File $FILE exist."
+             else
+             echo "File $FILE does not exist" >&2
+             fi          
