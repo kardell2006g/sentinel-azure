@@ -52,7 +52,7 @@ jobs:
       - name: Check Path Exists
         run: #echo "Checking following paths exist:" ${{ env.test }}
             a = "b"
-            if [ $a ];
+            if echo $a ;
             then echo "$a has been found."
             else echo "filename has not been found"
             fi
