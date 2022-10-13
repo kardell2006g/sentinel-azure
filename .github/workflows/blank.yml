@@ -51,8 +51,8 @@ jobs:
       # Check Path 
       - name: Check Path Exists
         run: #echo "Checking following paths exist:" ${{ env.test }}
-            a=$(b)
-            if $a = "b"
+            a=$("b")
+            if echo $a = "b"
             then echo "$a has been found."
             else echo "filename has not been found"
             fi
