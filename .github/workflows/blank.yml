@@ -51,6 +51,7 @@ jobs:
       # Check Path 
       - name: Check Path Exists
         run: #echo "Checking following paths exist:" ${{ env.test }}
+            echo
             file="$(/.config/backup.cfg)"
             if [ ! -f "$file" ]
             then
