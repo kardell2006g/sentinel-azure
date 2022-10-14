@@ -53,4 +53,4 @@ jobs:
         env:
             var: Hello
         run: #echo "Checking following paths exist:" ${{ env.test }}
-             if [ -f "./functions/azure-functions.sentinel" ]; then echo "File exists"; else echo "File at path <$test> does not exist in repo"; exit 1; fi
+             if [ -f "$test" | xargs ]; then echo "File exists"; else echo "File at path <$test> does not exist in repo"; exit 1; fi
