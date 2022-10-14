@@ -53,4 +53,4 @@ jobs:
         env:
             var: Hello
         run: #echo "Checking following paths exist:" ${{ env.test }}
-             if [ -f "$var" ]; then echo "var is unset"; else echo "var is set to $var"; fi
+             if [ -f "$var" ]; then echo "File exists"; else echo "File at path <$var> does not exist in repo"; exit 1; fi
