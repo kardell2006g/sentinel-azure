@@ -42,7 +42,7 @@ jobs:
       - name: match
         run:  #echo 'test<<EOF' >> $GITHUB_ENV 
               while read line; do                  
-              if  echo "$line" | grep -q "source"; then echo test="${line##*=}" >> $GITHUB_ENV ; fi
+              if  echo "$line" | grep -q "source"; then echo test="${line##%*=}" >> $GITHUB_ENV ; fi
               done < ./sentinel.hcl
               #echo 'EOF' >> $GITHUB_ENV
       # Echo Variable  
@@ -53,4 +53,4 @@ jobs:
         env:
             var: Hello
         run: #echo "Checking following paths exist:" ${{ env.test }}
-             if [ -f "$test" | sed -e 's/^[ \t]*//']; then echo "File exists"; else echo "File at path <$test> does not exist in repo"; exit 1; fi
+             if [ -f "$test" ]; then echo "File exists"; else echo "File at path <$test> does not exist in repo"; exit 1; fi
