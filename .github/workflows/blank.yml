@@ -42,7 +42,7 @@ jobs:
       - name: match
         run:  #echo 'test<<EOF' >> $GITHUB_ENV 
               while read line; do                  
-              if  echo "$line" | grep -q "source"; then echo test="${line##*= }" >> $GITHUB_ENV ; fi
+              if  echo "$line" | grep -q "source"; then echo test=${line##*= } >> $GITHUB_ENV ; fi
               done < ./sentinel.hcl
               #echo 'EOF' >> $GITHUB_ENV
       # Echo Variable  
