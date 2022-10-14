@@ -53,4 +53,4 @@ jobs:
         env:
             var: Hello
         run: #echo "Checking following paths exist:" ${{ env.test }}
-             if [ -F ${test} ]; then echo "var is unset"; else echo "var is set to '$test'"; fi
+             if [ -f "$test" ]; then echo "var is unset"; else echo "var is set to '$test'"; fi
