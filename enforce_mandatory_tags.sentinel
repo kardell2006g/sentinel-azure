@@ -16,6 +16,7 @@ param resource_types default [
   "azurerm_linux_virtual_machine",
   "azurerm_windows_virtual_machine",
   "azurerm_virtual_network",
+  "azurerm_cognitive_account",
 ]
 
 # List of mandatory tags
